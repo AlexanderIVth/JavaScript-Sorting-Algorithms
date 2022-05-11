@@ -29,3 +29,20 @@
   Hoare was elected a member of the National Academy of Engineering in 20006 for fundamental contributions to 
   computer science in the areas of algorithms, operating systems, and programming languages.
 */
+
+/*
+   Function name: Numerical_quick_sort.
+   Parameter(s): Possibly unsorted numerical array.
+   Return(s): Sorted numerical array.
+   Description: This function iterates through the array looking for the
+      middle value from the least to greates values and places it accordingly.
+      This process is repeated multiple times depending on the length of the
+      array given in the parameter. This function requires another function.
+*/
+function Numerical_quick_sort(Numerical_array){
+  //Try code
+  try{
+    //Local variables to store the pivot.
+    var mid = Numerical_array[length/2];
+  }
+}
