@@ -52,11 +52,15 @@ Email: parcasioalexander@outlook.com
             the number Id, number1,number2,number3,etc.. .
         */
         function getArrayFromInput(){
+            //Code lines that loop 6 times with and index loop
             for(var i = 0; i < 6; i++){
-                array[i] = document.getElementById("number"+(i+1)).value;
+                //Use the index loop to apply values to the array according to the
+                //Number Inputs and make sure the input is converted to a number
+                array[i] = parseFloat(document.getElementById("number"+(i+1)).value);
             }
-           
-           return array;
+            
+            //Return the array and its values
+            return array;
         }
 
         /*
@@ -67,14 +71,20 @@ Email: parcasioalexander@outlook.com
             values that is not empty or 0 or negative numbers.
         */
         function filterArray(array){
+            //Create a local variable for the filtered Array
             filteredArray = [];
 
+            //Create a loop that uses the length of the array parameter
             for(var i = 0; i < array.length; i++){
+                //If the current value in the array is not empty or 
+                //not a 0 or negative value
                 if(array[i] != "" && array[i] > 0){
+                    //Add this value to the filteredArray
                     filteredArray.push(array[i]);
                 }
             }
 
+            //Return the filtered Array
             return filteredArray;
         }
 
@@ -89,6 +99,7 @@ Email: parcasioalexander@outlook.com
             //variables initially stores the first value in the array.
             var low = Numerical_array[0];
             var high = Numerical_array[0];
+            
             //Loop through the array
             for (var i = 0; i < Numerical_array.length;i++){
                 //If the least value is greater than the current value.
@@ -134,7 +145,6 @@ Email: parcasioalexander@outlook.com
         function remove_array_least_value(Numerical_array){
             //Variable to store the least value and the array to return.
             var low = get_least_and_highest_array_values(Numerical_array)[0];
-
             //Splice or remove the least value from the array
             Numerical_array.splice(Numerical_array.indexOf(low),1);
             
